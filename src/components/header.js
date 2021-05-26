@@ -1,30 +1,42 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
 
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `rebeccapurple`,
+      background: `#fff`,
       marginBottom: `1.45rem`,
+      color: `#1D1FDD`,
     }}
   >
     <div
       style={{
         margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        maxWidth: 1440,
+        padding: `0 1.0875rem 1.45rem`,
       }}
     >
       <h1 style={{ margin: 0 }}>
         <Link
           to="/"
           style={{
-            color: `white`,
+            color: `#1D1FDD`,
             textDecoration: `none`,
           }}
         >
-          {siteTitle}
+              <StaticImage
+              src="../images/ms-logo.png"
+              width={108}
+              quality={95}
+              placeholder= {`transparent`}
+              breakpoints= {[750, 1080, 1366, 1920]}
+              backgroundColor= {`transparent`}
+              formats={["AUTO", "WEBP", "AVIF"]}
+              alt="Matter Supply logo"
+              style={{ marginBottom: 0 }}
+            />
         </Link>
       </h1>
     </div>
