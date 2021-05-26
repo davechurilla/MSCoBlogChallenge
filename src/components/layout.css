@@ -1,7 +1,7 @@
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font: 112.5%/1.45em georgia, serif, sans-serif;
+  font: 100%/1.4em georgia, serif, sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -325,17 +325,16 @@ h6 {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
+  margin-bottom: 0;
   padding-bottom: 0;
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'neuehanskendrick-regular', sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 0.78405rem;
+  font-size: 0.5rem;
   line-height: 1.1;
 }
 hgroup {
@@ -615,7 +614,14 @@ pre tt:after {
 .column.page-right{
   display: flex;
 }
-
+.createPost {
+  padding: 15px 0;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eaeaea;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
 .msButton {
   border-radius: 24px;
   border: 1px solid #1D1FDD;
@@ -627,9 +633,26 @@ pre tt:after {
   font-weight: bold;
 }
 
+.msButton a {
+  color: white;
+  text-decoration: none;;
+}
+
+.readRightCta, .readCta {
+  text-decoration: none;
+}
+.readRightCta {
+  float: right;
+}
+
+.notification  {
+  border-bottom: 1px solid #eaeaea;
+}
+
 @media screen and (max-width: 600px) {
   .row {
     display: block;
+    background:rgba(255, 255, 255, 0.5);
   }
   .column {
     width: 100%;
@@ -638,8 +661,11 @@ pre tt:after {
   body {
     background-image: none;
   }
+  .gatsby-focus-wrapper {
+    position: relative;
+  }
   .mobilebg {
-    position: absolute;
+    position: fixed;
     bottom:-3rem;
     background-position: 100% bottom;
     background-size: 40%;
@@ -648,6 +674,10 @@ pre tt:after {
     overflow: hidden;
     background-repeat: no-repeat;
     background-image: url(../images/nightgazer.png);
+    z-index: -1;
+  }
+  .createPost  {
+    align-items: center;
   }
 }
 

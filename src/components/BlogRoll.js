@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql, StaticQuery } from 'gatsby'
+import { Link, graphql, StaticQuery, Redirect } from 'gatsby'
 
 class BlogRoll extends React.Component {
   render() {
@@ -9,6 +9,10 @@ class BlogRoll extends React.Component {
 
     return (
       <div className="columns">
+        <div className="createPost">
+        <button className="msButton"><a href="http://localhost:8000/admin">Create new Post</a></button>
+          {/* <Redirect to="http://localhost:8000/admin"><button className="msButton">Create new Post</button></Redirect> */}
+        </div>
         {posts &&
           posts.map(({ node: post }) => (
             <div className="is-parent" key={post.id}>
@@ -19,24 +23,22 @@ class BlogRoll extends React.Component {
               >
                 <header>
                   <p className="post-meta">
+                    <h6 className="subtitle">
+                      {post.frontmatter.date}
+                    </h6>
                     <Link
-                      className="title"
+                      className="title readCta"
                       to={post.frontmatter.path}
                     >
                       {post.frontmatter.title}
                     </Link>
-                    <span className="subtitle">
-                    &nbsp;&bull; {post.frontmatter.date}
-                    </span>
+                    <Link className="button readRightCta" to={post.frontmatter.path}>
+                      READ
+                    </Link>
                   </p>
                 </header>
                 <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button" to={post.frontmatter.path}>
-                    Keep Reading →
-                  </Link>
+                  {/* {post.excerpt} */}
                 </p>
               </article>
             </div>

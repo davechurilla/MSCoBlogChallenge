@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div style={{position: 'relative'}}>
+    <div>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div
         style={{
