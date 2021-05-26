@@ -44,6 +44,17 @@ const Layout = ({ children }) => {
           <a href="https://www.gatsbyjs.com">Gatsby</a>
         </footer>
       </div>
+      <script>{`
+        if (window.netlifyIdentity) {
+          window.netlifyIdentity.on("init", user => {
+            if (!user) {
+              window.netlifyIdentity.on("login", () => {
+                document.location.href = "/admin/";
+              });
+            }
+          });
+        }
+      `}</script>
     </>
   )
 }
