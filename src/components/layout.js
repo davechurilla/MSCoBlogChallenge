@@ -25,17 +25,18 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <div style={{position: 'relative'}}>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div
         style={{
           margin: `0 auto`,
           maxWidth: 1440,
-          padding: `0 0 1.45rem 1.5rem`,
+          padding: `0 1.0rem 1.45rem 1.5rem`,
         }}
       >
         <div className="row">
-          <div className="column">
+          <div className="column" 
+          style={{ marginBottom: `10%`, }}>
             <main>{children}</main>
           </div>
           <div className="column page-right"></div>
@@ -48,7 +49,7 @@ const Layout = ({ children }) => {
         </footer>
       </div>
       <div className="mobilebg"></div>
-    </>
+    </div>
   )
 }
 

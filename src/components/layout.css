@@ -640,7 +640,7 @@ pre tt:after {
   }
   .mobilebg {
     position: absolute;
-    bottom:-1.0rem;
+    bottom:-3rem;
     background-position: 100% bottom;
     background-size: 40%;
     width: 100%;
