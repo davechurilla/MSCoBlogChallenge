@@ -1,7 +1,7 @@
 ---
-path: /blog/first-post
-date: 2021-05-26T01:32:34.955Z
-title: Austin. new book.
+path: /blog/austin
+date: 2021-05-26T13:53:13.738Z
+title: "Austin. new book. "
 ---
 Armed with my hand-drawn slides and a sense of humor, I’ve given talks and workshops all over for folks such as Pixar, Google, LucasFilm, TEDx, Turner Broadcasting, and The Economist, including keynotes at SXSW Interactive, HOW Design Live, and Confab: The Content Strategy Conference.  To inquire about my availability, contact Wes Neff at Leigh Bureau by phone at 1-908-253-0843 or by email: wesn@leighbureau.com.
 
