@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql, StaticQuery, Redirect } from 'gatsby'
+import { Link, graphql, StaticQuery } from 'gatsby'
 
 class BlogRoll extends React.Component {
   render() {
@@ -22,10 +22,10 @@ class BlogRoll extends React.Component {
                 }`}
               >
                 <header>
+                  <h6 className="subtitle">
+                    {post.frontmatter.date}
+                  </h6>
                   <p className="post-meta">
-                    <h6 className="subtitle">
-                      {post.frontmatter.date}
-                    </h6>
                     <Link
                       className="title readCta"
                       to={post.frontmatter.path}
@@ -37,9 +37,6 @@ class BlogRoll extends React.Component {
                     </Link>
                   </p>
                 </header>
-                <p>
-                  {/* {post.excerpt} */}
-                </p>
               </article>
             </div>
           ))}

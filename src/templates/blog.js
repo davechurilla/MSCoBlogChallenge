@@ -7,9 +7,9 @@ export default function Template({
 }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
-  const mainBg = {
-    backgroundImage: 'url("../images/painter.png")',
-  }
+  // const mainBg = {
+  //   backgroundImage: 'url("../images/painter.png")',
+  // }
 
   return (
     <Layout>

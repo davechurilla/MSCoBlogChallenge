@@ -1,9 +1,9 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
+import { StaticImage } from "gatsby-plugin-image"
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <header
     style={{
       background: `#fff`,
