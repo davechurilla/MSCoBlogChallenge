@@ -1,7 +1,6 @@
 import React from 'react'
 import Layout from "../components/layout"
 import BlogRoll from '../components/BlogRoll'
-// import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 class BlogIndexPage extends React.Component {
   render() {

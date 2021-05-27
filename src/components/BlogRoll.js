@@ -10,16 +10,13 @@ class BlogRoll extends React.Component {
     return (
       <div className="columns">
         <div className="createPost">
-        <button className="msButton"><a href="http://localhost:8000/admin">Create new Post</a></button>
-          {/* <Redirect to="http://localhost:8000/admin"><button className="msButton">Create new Post</button></Redirect> */}
+          <button className="msButton"><a href="/admin/">Create new Post</a></button>
         </div>
         {posts &&
           posts.map(({ node: post }) => (
             <div className="is-parent" key={post.id}>
               <article
-                className={`notification ${
-                  post.frontmatter.featuredpost ? 'is-featured' : ''
-                }`}
+                className="notification"
               >
                 <header>
                   <h6 className="subtitle">
